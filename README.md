@@ -1,8 +1,12 @@
 # CoRE Resource Directory: DNS-SD mapping
 
-This is the working area for the Working Group internet-draft, "CoRE Resource Directory: DNS-SD mapping".
+This is the working area for the **proposed** (split off
+from
+[Resource Directory](https://core-wg.github.io/resource-directory))
+Working Group internet-draft, "CoRE Resource Directory: DNS-SD
+mapping".
 
-* [Editor's copy](https://core-wg.github.io/rd-dns-sd/)
+* [Editor's copy](https://core-wg.github.io/rd-dns-sd/)  [![Build Status](https://travis-ci.org/core-wg/rd-dns-sd.svg?branch=master)](https://travis-ci.org/core-wg/rd-dns-sd)
 * [Working Group Draft](https://tools.ietf.org/html/draft-ietf-core-rd-dns-sd)
 * [Compare Working Group Draft and Editor's copy](https://tools.ietf.org/rfcdiff?url1=https://tools.ietf.org/id/draft-ietf-core-rd-dns-sd.txt&url2=https://core-wg.github.io/rd-dns-sd/draft-ietf-core-rd-dns-sd.txt)
 
