@@ -2,7 +2,7 @@
 title: >
   CoRE Resource Directory: DNS-SD mapping
 docname: draft-ietf-core-rd-dns-sd-latest
-date: 2017-03-26
+date: 2017-03-31
 stand_alone: true
 ipr: trust200902
 cat: std
@@ -30,15 +30,25 @@ author:
 #  country: USA
 #  phone: "+1-408-203-9434"
 #  email: zach.shelby@arm.com
-#- ins: M. Koster
-#  name: Michael Koster
-#  org: SmartThings
-#  street: 665 Clyde Avenue
-#  city: Mountain View
-#  code: '94043'
-#  country: USA
-#  phone: "+1-707-502-5136"
-#  email: Michael.Koster@smartthings.com
+- ins: K. E. Lynn
+  name: Kerry Lynn
+  org: Verizon Labs
+  street: 50 Sylvan Rd
+  city: Waltham
+  region: MA
+  code: '02451'
+  country: USA
+  phone: "+1 781 296 9722"
+  email: kerlyn@ieee.org
+- ins: M. Koster
+  name: Michael Koster
+  org: SmartThings
+  street: 665 Clyde Avenue
+  city: Mountain View
+  code: '94043'
+  country: USA
+  phone: "+1-707-502-5136"
+  email: Michael.Koster@smartthings.com
 #- ins: C. Bormann
 #  name: Carsten Bormann
 #  org: Universitaet Bremen TZI
