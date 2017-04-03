@@ -8,6 +8,8 @@ Intended status: Standards Track                                 K. Lynn
 Expires: October 2, 2017                                    Verizon Labs
                                                                M. Koster
                                                              SmartThings
+                                                         P. van der Stok
+                                                              consultant
                                                           March 31, 2017
 
 
@@ -47,8 +49,6 @@ Copyright Notice
    carefully, as they describe your rights and restrictions with respect
    to this document.  Code Components extracted from this document must
    include Simplified BSD License text as described in Section 4.e of
-   the Trust Legal Provisions and are provided without warranty as
-   described in the Simplified BSD License.
 
 
 
@@ -57,6 +57,9 @@ Defined, et al.          Expires October 2, 2017                [Page 1]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
+
+   the Trust Legal Provisions and are provided without warranty as
+   described in the Simplified BSD License.
 
 Table of Contents
 
@@ -79,8 +82,8 @@ Table of Contents
    7.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   8
      7.1.  Normative References  . . . . . . . . . . . . . . . . . .   8
      7.2.  Informative References  . . . . . . . . . . . . . . . . .   9
-   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .   9
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   9
+   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .  10
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  10
 
 1.  Introduction
 
@@ -103,9 +106,6 @@ Table of Contents
    This specification makes use of the terminology of
    [I-D.ietf-core-resource-directory].
 
-   This specification makes use of the following additional terminology:
-
-   TBD:  TBD
 
 
 
@@ -113,6 +113,10 @@ Defined, et al.          Expires October 2, 2017                [Page 2]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
+
+   This specification makes use of the following additional terminology:
+
+   TBD:  TBD
 
    TBD:  TBD
 
@@ -158,10 +162,6 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
    of a resource, or traversing dynamic resource structures.  However,
    other links are very useful to be exported to other directories, for
    example the entry point resource to a functional service.  This
-   attribute MAY be used as a query parameter in the RD Lookup Function
-   Set defined in Section 7.
-
-
 
 
 
@@ -169,6 +169,9 @@ Defined, et al.          Expires October 2, 2017                [Page 3]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
+
+   attribute MAY be used as a query parameter in the RD Lookup Function
+   Set defined in Section 7.
 
 3.  DNS-SD Mapping
 
@@ -215,9 +218,6 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
    A default <Instance> part of the service name may be set at the
    factory or during the commissioning process.  It SHOULD uniquely
-   identify an instance of <ServiceType> within a <Domain>.  Taken
-   together, these three elements comprise a unique name for an SRV/ TXT
-   record pair within the DNS subdomain.
 
 
 
@@ -225,6 +225,10 @@ Defined, et al.          Expires October 2, 2017                [Page 4]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
+
+   identify an instance of <ServiceType> within a <Domain>.  Taken
+   together, these three elements comprise a unique name for an SRV/ TXT
+   record pair within the DNS subdomain.
 
    The granularity of a service name MAY be that of a host or group, or
    it could represent a particular resource within a CoAP server.  The
@@ -270,10 +274,6 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
    The resource type "rt" attribute is mapped into the <ServiceType>
    part of a DNS-SD service name and SHOULD conform to the reg-rel-type
    production of the Link Format defined in Section 2 of [RFC6690].  The
-   "rt" attribute MUST be composed of at least a single Net-Unicode text
-   string, without underscore '_' or period '.' and limited to 15 octets
-   in length, which represents the application protocol name.  This
-   string is mapped to the DNS-SD <ServiceType> by prepending an
 
 
 
@@ -282,6 +282,10 @@ Defined, et al.          Expires October 2, 2017                [Page 5]
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
 
+   "rt" attribute MUST be composed of at least a single Net-Unicode text
+   string, without underscore '_' or period '.' and limited to 15 octets
+   in length, which represents the application protocol name.  This
+   string is mapped to the DNS-SD <ServiceType> by prepending an
    underscore and appending a period followed by the "_udp" label.  For
    example, rt="dali" is mapped into "_dali._udp".
 
@@ -326,10 +330,6 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
    populate the DNS-SD database in an automated fashion.  CoAP resource
    descriptions (links) can be exported to DNS-SD for exposure to
    service discovery by using the Resource Instance attribute as the
-   basis for a unique service name, composed with the Resource Type as
-   the <ServiceType>, and registered in the correct <Domain>.  The agent
-   responsible for exporting records to the DNS zone file SHOULD be
-   authenticated to the DNS server.  The following example, using the
 
 
 
@@ -338,6 +338,10 @@ Defined, et al.          Expires October 2, 2017                [Page 6]
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
 
+   basis for a unique service name, composed with the Resource Type as
+   the <ServiceType>, and registered in the correct <Domain>.  The agent
+   responsible for exporting records to the DNS zone file SHOULD be
+   authenticated to the DNS server.  The following example, using the
    example lookup location /rd-lookup, shows an agent discovering a
    resource to be exported:
 
@@ -376,6 +380,20 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
    query the RD to return all groups which are exported to be inserted
    into DNS.
 
+
+
+
+
+
+
+
+
+
+Defined, et al.          Expires October 2, 2017                [Page 7]
+
+Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
+
+
       Req: GET /rd-lookup/gp?exp
 
       Res: 2.05 Content
@@ -386,14 +404,6 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
    The group with FQDN grp_R2-4-015.bc.example.com can be entered into
    the DNS by the agent.  The accompanying instance name is grp1234.
-
-
-
-Defined, et al.          Expires October 2, 2017                [Page 7]
-
-Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
-
-
    The <ServiceType> is chosen to be _group._udp.  The agent enters the
    following RRs into the DNS.
 
@@ -430,6 +440,16 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
               DOI 10.17487/RFC2119, March 1997,
               <http://www.rfc-editor.org/info/rfc2119>.
 
+
+
+
+
+
+Defined, et al.          Expires October 2, 2017                [Page 8]
+
+Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
+
+
    [RFC5988]  Nottingham, M., "Web Linking", RFC 5988,
               DOI 10.17487/RFC5988, October 2010,
               <http://www.rfc-editor.org/info/rfc5988>.
@@ -440,15 +460,6 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
               Transport Protocol Port Number Registry", BCP 165,
               RFC 6335, DOI 10.17487/RFC6335, August 2011,
               <http://www.rfc-editor.org/info/rfc6335>.
-
-
-
-
-
-Defined, et al.          Expires October 2, 2017                [Page 8]
-
-Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
-
 
    [RFC6570]  Gregorio, J., Fielding, R., Hadley, M., Nottingham, M.,
               and D. Orchard, "URI Template", RFC 6570,
@@ -487,6 +498,14 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
               DOI 10.17487/RFC7252, June 2014,
               <http://www.rfc-editor.org/info/rfc7252>.
 
+
+
+
+Defined, et al.          Expires October 2, 2017                [Page 9]
+
+Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
+
+
 Acknowledgements
 
    This document was split off from [I-D.ietf-core-resource-directory].
@@ -495,15 +514,6 @@ Acknowledgements
 Authors' Addresses
 
    To Be Defined
-
-
-
-
-
-
-Defined, et al.          Expires October 2, 2017                [Page 9]
-
-Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
 
    Kerry Lynn
@@ -526,22 +536,12 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
    Email: Michael.Koster@smartthings.com
 
 
+   Peter van der Stok
+   consultant
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   Phone: +31-492474673 (Netherlands), +33-966015248 (France)
+   Email: consultancy@vanderstok.org
+   URI:   www.vanderstok.org
 
 
 
