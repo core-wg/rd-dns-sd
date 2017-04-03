@@ -58,13 +58,13 @@ author:
 #  country: Germany
 #  phone: "+49-421-218-63921"
 #  email: cabo@tzi.org
-#- ins: P. van der Stok
-#  name: Peter van der Stok
-#  org: consultant
-#  abbrev: consultant
-#  phone: "+31-492474673 (Netherlands), +33-966015248 (France)"
-#  email: consultancy@vanderstok.org
-#  uri: www.vanderstok.org
+- ins: P. van der Stok
+  name: Peter van der Stok
+  org: consultant
+  abbrev: consultant
+  phone: "+31-492474673 (Netherlands), +33-966015248 (France)"
+  email: consultancy@vanderstok.org
+  uri: www.vanderstok.org
 normative:
   RFC6690:
   RFC2119:
