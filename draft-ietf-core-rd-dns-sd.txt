@@ -2,14 +2,14 @@
 
 
 
-CoRE                                                     C. Amsuess, Ed.
-Internet-Draft                               Energy Harvesting Solutions
-Intended status: Standards Track                                 K. Lynn
-Expires: October 2, 2017                                    Verizon Labs
+CoRE                                                             K. Lynn
+Internet-Draft                                              Verizon Labs
+Intended status: Standards Track                         P. van der Stok
+Expires: October 2, 2017                                      consultant
                                                                M. Koster
                                                              SmartThings
-                                                         P. van der Stok
-                                                              consultant
+                                                         C. Amsuess, Ed.
+                                             Energy Harvesting Solutions
                                                           March 31, 2017
 
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Amsuess, et al.          Expires October 2, 2017                [Page 1]
+Lynn, et al.             Expires October 2, 2017                [Page 1]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Amsuess, et al.          Expires October 2, 2017                [Page 2]
+Lynn, et al.             Expires October 2, 2017                [Page 2]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
@@ -165,7 +165,7 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
 
 
-Amsuess, et al.          Expires October 2, 2017                [Page 3]
+Lynn, et al.             Expires October 2, 2017                [Page 3]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
@@ -221,7 +221,7 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
 
 
-Amsuess, et al.          Expires October 2, 2017                [Page 4]
+Lynn, et al.             Expires October 2, 2017                [Page 4]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
@@ -277,7 +277,7 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
 
 
-Amsuess, et al.          Expires October 2, 2017                [Page 5]
+Lynn, et al.             Expires October 2, 2017                [Page 5]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
@@ -333,7 +333,7 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
 
 
-Amsuess, et al.          Expires October 2, 2017                [Page 6]
+Lynn, et al.             Expires October 2, 2017                [Page 6]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
@@ -389,7 +389,7 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
 
 
-Amsuess, et al.          Expires October 2, 2017                [Page 7]
+Lynn, et al.             Expires October 2, 2017                [Page 7]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
@@ -445,7 +445,7 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
 
 
-Amsuess, et al.          Expires October 2, 2017                [Page 8]
+Lynn, et al.             Expires October 2, 2017                [Page 8]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
@@ -501,7 +501,7 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
 
 
-Amsuess, et al.          Expires October 2, 2017                [Page 9]
+Lynn, et al.             Expires October 2, 2017                [Page 9]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2017
 
@@ -513,16 +513,6 @@ Acknowledgements
 
 Authors' Addresses
 
-   Christian Amsuess (editor)
-   Energy Harvesting Solutions
-   Hollandstr. 12/4
-   1020
-   Austria
-
-   Phone: +43-664-9790639
-   Email: c.amsuess@energyharvesting.at
-
-
    Kerry Lynn
    Verizon Labs
    50 Sylvan Rd
@@ -531,6 +521,14 @@ Authors' Addresses
 
    Phone: +1 781 296 9722
    Email: kerlyn@ieee.org
+
+
+   Peter van der Stok
+   consultant
+
+   Phone: +31-492474673 (Netherlands), +33-966015248 (France)
+   Email: consultancy@vanderstok.org
+   URI:   www.vanderstok.org
 
 
    Michael Koster
@@ -543,18 +541,20 @@ Authors' Addresses
    Email: Michael.Koster@smartthings.com
 
 
-   Peter van der Stok
-   consultant
+   Christian Amsuess (editor)
+   Energy Harvesting Solutions
+   Hollandstr. 12/4
+   1020
+   Austria
 
-   Phone: +31-492474673 (Netherlands), +33-966015248 (France)
-   Email: consultancy@vanderstok.org
-   URI:   www.vanderstok.org
-
-
-
-
+   Phone: +43-664-9790639
+   Email: c.amsuess@energyharvesting.at
 
 
 
 
-Amsuess, et al.          Expires October 2, 2017               [Page 10]
+
+
+
+
+Lynn, et al.             Expires October 2, 2017               [Page 10]
