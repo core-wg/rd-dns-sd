@@ -20,16 +20,15 @@ area: Internet
 wg: CoRE
 kw: CoRE, Web Linking, Resource Discovery, Resource Directory
 author:
-- name: To Be Defined
-#- ins: Z. Shelby
-#  name: Zach Shelby
-#  org: ARM
-#  street: 150 Rose Orchard
-#  city: San Jose
-#  code: '95134'
-#  country: USA
-#  phone: "+1-408-203-9434"
-#  email: zach.shelby@arm.com
+- ins: C. Amsüss
+  name: Christian Amsüss
+  organization: Energy Harvesting Solutions
+  street: Hollandstr. 12/4
+  code: '1020'
+  country: Austria
+  phone: "+43-664-9790639"
+  email: c.amsuess@energyharvesting.at
+  role: editor
 - ins: K. E. Lynn
   name: Kerry Lynn
   org: Verizon Labs
@@ -49,15 +48,6 @@ author:
   country: USA
   phone: "+1-707-502-5136"
   email: Michael.Koster@smartthings.com
-#- ins: C. Bormann
-#  name: Carsten Bormann
-#  org: Universitaet Bremen TZI
-#  street: Postfach 330440
-#  city: Bremen
-#  code: D-28359
-#  country: Germany
-#  phone: "+49-421-218-63921"
-#  email: cabo@tzi.org
 - ins: P. van der Stok
   name: Peter van der Stok
   org: consultant
