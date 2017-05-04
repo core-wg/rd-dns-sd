@@ -20,15 +20,6 @@ area: Internet
 wg: CoRE
 kw: CoRE, Web Linking, Resource Discovery, Resource Directory
 author:
-- ins: C. Amsüss
-  name: Christian Amsüss
-  organization: Energy Harvesting Solutions
-  street: Hollandstr. 12/4
-  code: '1020'
-  country: Austria
-  phone: "+43-664-9790639"
-  email: c.amsuess@energyharvesting.at
-  role: editor
 - ins: K. E. Lynn
   name: Kerry Lynn
   org: Verizon Labs
@@ -39,6 +30,13 @@ author:
   country: USA
   phone: "+1 781 296 9722"
   email: kerlyn@ieee.org
+- ins: P. van der Stok
+  name: Peter van der Stok
+  org: consultant
+  abbrev: consultant
+  phone: "+31-492474673 (Netherlands), +33-966015248 (France)"
+  email: consultancy@vanderstok.org
+  uri: www.vanderstok.org
 - ins: M. Koster
   name: Michael Koster
   org: SmartThings
@@ -48,13 +46,15 @@ author:
   country: USA
   phone: "+1-707-502-5136"
   email: Michael.Koster@smartthings.com
-- ins: P. van der Stok
-  name: Peter van der Stok
-  org: consultant
-  abbrev: consultant
-  phone: "+31-492474673 (Netherlands), +33-966015248 (France)"
-  email: consultancy@vanderstok.org
-  uri: www.vanderstok.org
+- ins: C. Amsüss
+  name: Christian Amsüss
+  organization: Energy Harvesting Solutions
+  street: Hollandstr. 12/4
+  code: '1020'
+  country: Austria
+  phone: "+43-664-9790639"
+  email: c.amsuess@energyharvesting.at
+  role: editor
 normative:
   RFC6690:
   RFC2119:
