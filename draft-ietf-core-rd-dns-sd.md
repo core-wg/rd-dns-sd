@@ -2,7 +2,6 @@
 title: >
   CoRE Resource Directory: DNS-SD mapping
 docname: draft-ietf-core-rd-dns-sd-latest
-date: 2017-03-31
 stand_alone: true
 ipr: trust200902
 cat: std
