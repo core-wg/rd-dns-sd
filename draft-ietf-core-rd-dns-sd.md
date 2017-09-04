@@ -130,7 +130,7 @@ for use in the CoRE Link Format {{RFC6690}}:
 The Resource Instance "ins" attribute is an
 identifier for this resource, which makes it possible
 to distinguish it from other similar resources. This attribute is similar
-in use to the &lt;Instance> portion of a DNS-SD record (see {{cheshire}}, and SHOULD be unique across resources with the same Resource Type attribute
+in use to the <Instance> portion of a DNS-SD record (see {{cheshire}}, and SHOULD be unique across resources with the same Resource Type attribute
 in the domain it is used. A Resource Instance might be a descriptive string
 like "Ceiling Light, Room 3", a short ID like "AF39" or a unique UUID or
 iNumber. This attribute is used by a Resource Directory to distinguish between
@@ -176,27 +176,27 @@ specification.
 
 DNS-SD service names are limited to 255 octets and are of the form:
 
-Service Name = &lt;Instance>.&lt;ServiceType>.&lt;Domain>.
+Service Name = <Instance>.<ServiceType>.<Domain>.
 
 The service name is the label of SRV/TXT resource records. The SRV RR specifies
 the host and the port of the endpoint. The TXT RR provides additional information
 in the form of key/value pairs.
 
-The &lt;Domain> part of the service name is identical to the global (DNS
+The <Domain> part of the service name is identical to the global (DNS
 subdomain) part of the authority in URIs that identify servers or groups
 of servers.
 
-The &lt;ServiceType> part is composed of at least two labels.  The first
+The <ServiceType> part is composed of at least two labels.  The first
 label of the pair is the application protocol name {{RFC6335}} preceded by an
 underscore character.  The second label indicates the transport and is always
 "_udp" for UDP-based CoAP services.  In cases where narrowing the scope of
 the search may be useful, these labels may be optionally preceded by a
 subtype name followed by the "_sub" label.  An example of this more specific
-&lt;ServiceType> is "light._sub._dali._udp".
+<ServiceType> is "light._sub._dali._udp".
 
-A default &lt;Instance> part of the service name may be set at the factory
+A default <Instance> part of the service name may be set at the factory
 or during the commissioning process.  It SHOULD uniquely identify an instance
-of &lt;ServiceType> within a &lt;Domain>.  Taken together, these three
+of <ServiceType> within a <Domain>.  Taken together, these three
 elements comprise a unique name for an SRV/ TXT record pair within the DNS
 subdomain.
 
@@ -210,13 +210,13 @@ a corresponding TXT record.
 A DNS TXT record is in practice limited to a few hundred octets in length,
 which is indicated in the resource record header in the DNS response message.
 The data consists of one or more strings comprising a key=value pair.  By
-convention, the first pair is txtver=&lt;number> (to support different
+convention, the first pair is txtver=<number> (to support different
 versions of a service description).
 
 
-## mapping ins to &lt;Instance> {#ins}
+## mapping ins to <Instance> {#ins}
 
-The Resource Instance "ins" attribute maps to the &lt;Instance> part of a
+The Resource Instance "ins" attribute maps to the <Instance> part of a
 DNS-SD service name.  It is stored directly in the DNS as a single DNS label
 of canonical precomposed UTF-8 {{RFC3629}} "Net-Unicode" (Unicode
 Normalization Form C) {{RFC5198}} text.  However, to the extent that the
@@ -224,7 +224,7 @@ Normalization Form C) {{RFC5198}} text.  However, to the extent that the
 SHOULD use the syntax defined in Section 3.5 of {{RFC1034}} and Section 2.1
 of {{RFC1123}}.
 
-The &lt;Instance> part of the name of a service being offered on the network
+The <Instance> part of the name of a service being offered on the network
 SHOULD be configurable by the user setting up the service, so that he or she
 may give it an informative name.  However, the device or service SHOULD NOT
 require the user to configure a name before it can be used.  A sensible
@@ -238,21 +238,21 @@ DNS labels are currently limited to 63 octets in length and the
 entire service name may not exceed 255 octets.
 
 
-## Mapping rt to &lt;ServiceType> {#exp}
+## Mapping rt to <ServiceType> {#exp}
 
-The resource type "rt" attribute is mapped into the &lt;ServiceType> part of
+The resource type "rt" attribute is mapped into the <ServiceType> part of
 a DNS-SD service name and SHOULD conform to the reg-rel-type production of
 the Link Format defined in Section 2 of {{RFC6690}}.  The "rt" attribute MUST
 be composed of at least a single Net-Unicode text string, without underscore
 '_' or period '.' and limited to 15 octets in length, which represents the
 application protocol name.  This string is mapped to the DNS-SD
-&lt;ServiceType> by prepending an underscore and appending a period followed
+<ServiceType> by prepending an underscore and appending a period followed
 by the "_udp" label.  For example, rt="dali" is mapped into "_dali._udp".
 
 The application protocol name may be optionally followed by a period
 and a service subtype name consisting of a Net-Unicode text string,
 without underscore or period and limited to 63 octets.  This string
-is mapped to the DNS-SD &lt;ServiceType> by appending a period followed
+is mapped to the DNS-SD <ServiceType> by appending a period followed
 by the "_sub" label and then appending a period followed by the
 service type label pair derived as in the previous paragraph.  For
 example, rt="dali.light" is mapped into "light._sub._dali._udp".
@@ -275,10 +275,10 @@ A number of {{RFC6763}} key/value pairs are derived from link-format
 information, to be exported in the DNS-SD as key=value strings in a
 TXT record ({{RFC6763}}, Section 6.3).
 
-The resource &lt;URI> is exported as key/value pair "path=&lt;URI>".
+The resource <URI> is exported as key/value pair "path=<URI>".
 
 The Interface Description "if" attribute is exported as key/value
-pair "if=&lt;Interface Description>".
+pair "if=<Interface Description>".
 
 The DNS TXT record can be further populated by importing any other
 resource description attributes as they share the same key=value
@@ -293,7 +293,7 @@ populate the DNS-SD database in an automated fashion.  CoAP resource
 descriptions (links) can be exported to DNS-SD for exposure to
 service discovery by using the Resource Instance attribute as the
 basis for a unique service name, composed with the Resource Type as
-the &lt;ServiceType>, and registered in the correct &lt;Domain>.  The agent
+the <ServiceType>, and registered in the correct <Domain>.  The agent
 responsible for exporting records to the DNS
 zone file SHOULD be authenticated to the DNS server.
 The following example, using the example lookup location /rd-lookup, shows an agent discovering a resource to be
@@ -332,7 +332,7 @@ be: Spot.light._sub._dali._udp.office.example.com.
 
 
 # Examples
- 
+
 ## DNS entries {#dns-en}
 
 
@@ -351,7 +351,7 @@ ep="lm_R2-4-015_door
 ~~~~
 
 The group with FQDN grp_R2-4-015.bc.example.com can be entered into the DNS
-by the agent. The accompanying instance name is grp1234. The &lt;ServiceType>
+by the agent. The accompanying instance name is grp1234. The <ServiceType>
 is chosen to be _group._udp. The agent enters the following RRs into the
 DNS.
 
