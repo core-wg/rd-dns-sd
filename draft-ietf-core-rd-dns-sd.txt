@@ -5,15 +5,15 @@
 CoRE                                                             K. Lynn
 Internet-Draft                                           P. van der Stok
 Intended status: Standards Track                              Consultant
-Expires: September 6, 2018                                     M. Koster
+Expires: September 18, 2018                                    M. Koster
                                                              SmartThings
                                                               C. Amsuess
                                              Energy Harvesting Solutions
-                                                          March 05, 2018
+                                                          March 17, 2018
 
 
                 CoRE Resource Directory: DNS-SD mapping
-                      draft-ietf-core-rd-dns-sd-01
+                    draft-ietf-core-rd-dns-sd-latest
 
 Abstract
 
@@ -40,7 +40,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on September 6, 2018.
+   This Internet-Draft will expire on September 18, 2018.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Lynn, et al.            Expires September 6, 2018               [Page 1]
+Lynn, et al.           Expires September 18, 2018               [Page 1]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2018
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Lynn, et al.            Expires September 6, 2018               [Page 2]
+Lynn, et al.           Expires September 18, 2018               [Page 2]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2018
 
@@ -165,7 +165,7 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2018
 
 
 
-Lynn, et al.            Expires September 6, 2018               [Page 3]
+Lynn, et al.           Expires September 18, 2018               [Page 3]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2018
 
@@ -221,7 +221,7 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2018
 
 
 
-Lynn, et al.            Expires September 6, 2018               [Page 4]
+Lynn, et al.           Expires September 18, 2018               [Page 4]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2018
 
@@ -277,7 +277,7 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2018
 
 
 
-Lynn, et al.            Expires September 6, 2018               [Page 5]
+Lynn, et al.           Expires September 18, 2018               [Page 5]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2018
 
@@ -333,7 +333,7 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2018
 
 
 
-Lynn, et al.            Expires September 6, 2018               [Page 6]
+Lynn, et al.           Expires September 18, 2018               [Page 6]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2018
 
@@ -389,7 +389,7 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2018
 
 
 
-Lynn, et al.            Expires September 6, 2018               [Page 7]
+Lynn, et al.           Expires September 18, 2018               [Page 7]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2018
 
@@ -445,7 +445,7 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2018
 
 
 
-Lynn, et al.            Expires September 6, 2018               [Page 8]
+Lynn, et al.           Expires September 18, 2018               [Page 8]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2018
 
@@ -501,7 +501,7 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2018
 
 
 
-Lynn, et al.            Expires September 6, 2018               [Page 9]
+Lynn, et al.           Expires September 18, 2018               [Page 9]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2018
 
@@ -557,7 +557,7 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2018
 
 
 
-Lynn, et al.            Expires September 6, 2018              [Page 10]
+Lynn, et al.           Expires September 18, 2018              [Page 10]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2018
 
@@ -613,7 +613,7 @@ Authors' Addresses
 
 
 
-Lynn, et al.            Expires September 6, 2018              [Page 11]
+Lynn, et al.           Expires September 18, 2018              [Page 11]
 
 Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2018
 
@@ -669,4 +669,4 @@ Internet-Draft   CoRE Resource Directory: DNS-SD mapping      March 2018
 
 
 
-Lynn, et al.            Expires September 6, 2018              [Page 12]
+Lynn, et al.           Expires September 18, 2018              [Page 12]
