@@ -279,37 +279,39 @@ address {
   <link href="#rfc.toc" rel="Contents">
 <link href="#rfc.section.1" rel="Chapter" title="1 Introduction">
 <link href="#rfc.section.1.1" rel="Chapter" title="1.1 Terminology">
-<link href="#rfc.section.1.2" rel="Chapter" title="1.2 Resource Discovery">
-<link href="#rfc.section.1.3" rel="Chapter" title="1.3 Resource Directories">
+<link href="#rfc.section.1.2" rel="Chapter" title="1.2 CoRE Resource Discovery">
+<link href="#rfc.section.1.3" rel="Chapter" title="1.3 CoRE Resource Directories">
 <link href="#rfc.section.1.4" rel="Chapter" title="1.4 DNS-Based Service Discovery">
-<link href="#rfc.section.2" rel="Chapter" title="2 New Link-Format Attributes">
-<link href="#rfc.section.2.1" rel="Chapter" title="2.1 Resource Instance attribute &#8220;ins&#8221;">
-<link href="#rfc.section.2.2" rel="Chapter" title="2.2 Export attribute &#8220;exp&#8221;">
-<link href="#rfc.section.3" rel="Chapter" title="3 Mapping CoRE Link Attributes to DNS-SD Record Fields">
-<link href="#rfc.section.3.1" rel="Chapter" title="3.1 Mapping Resource Instance attribute &#8220;ins&#8221; to &lt;Instance&gt;">
-<link href="#rfc.section.3.2" rel="Chapter" title="3.2 Mapping Resource Type attribute &#8220;rt&#8221; to &lt;ServiceType&gt;">
-<link href="#rfc.section.3.3" rel="Chapter" title="3.3 Domain mapping">
-<link href="#rfc.section.3.4" rel="Chapter" title="3.4 TXT Record key=value strings">
-<link href="#rfc.section.3.5" rel="Chapter" title="3.5 Importing resource links into DNS-SD">
-<link href="#rfc.section.4" rel="Chapter" title="4 Examples">
-<link href="#rfc.section.4.1" rel="Chapter" title="4.1 DNS entries">
+<link href="#rfc.section.2" rel="Chapter" title="2 Mapping from web resources DNS services">
+<link href="#rfc.section.2.1" rel="Chapter" title="2.1 Domain mapping">
+<link href="#rfc.section.2.2" rel="Chapter" title="2.2 ServiceType mapping">
+<link href="#rfc.section.2.3" rel="Chapter" title="2.3 Instance mapping">
+<link href="#rfc.section.3" rel="Chapter" title="3 New Link-Format Attributes">
+<link href="#rfc.section.3.1" rel="Chapter" title="3.1 Export attribute &#8220;exp&#8221;">
+<link href="#rfc.section.3.2" rel="Chapter" title="3.2 Resource Instance attribute &#8220;ins&#8221;">
+<link href="#rfc.section.4" rel="Chapter" title="4 Mapping CoRE Link Attributes to DNS-SD Record Fields">
+<link href="#rfc.section.4.1" rel="Chapter" title="4.1 Mapping Resource Instance attribute &#8220;ins&#8221; to &lt;Instance&gt;">
+<link href="#rfc.section.4.2" rel="Chapter" title="4.2 Mapping Resource Type attribute &#8220;rt&#8221; to &lt;ServiceType&gt;">
+<link href="#rfc.section.4.3" rel="Chapter" title="4.3 TXT Record key=value strings">
+<link href="#rfc.section.4.4" rel="Chapter" title="4.4 Exporting resource links into DNS-SD">
 <link href="#rfc.section.5" rel="Chapter" title="5 IANA considerations">
+<link href="#rfc.section.5.1" rel="Chapter" title="5.1 Mapping Resource Type into ServiceType">
 <link href="#rfc.section.6" rel="Chapter" title="6 Security considerations">
 <link href="#rfc.references" rel="Chapter" title="7 References">
 <link href="#rfc.references.1" rel="Chapter" title="7.1 Normative References">
 <link href="#rfc.references.2" rel="Chapter" title="7.2 Informative References">
-<link href="#rfc.acknowledgements" rel="Chapter">
+<link href="#rfc.appendix.A" rel="Chapter" title="A Acknowledgments">
 <link href="#rfc.authors" rel="Chapter">
 
 
-  <meta name="generator" content="xml2rfc version 2.9.6 - https://tools.ietf.org/tools/xml2rfc" />
+  <meta name="generator" content="xml2rfc version 2.11.1 - https://tools.ietf.org/tools/xml2rfc" />
   <link rel="schema.dct" href="http://purl.org/dc/terms/" />
 
   <meta name="dct.creator" content="Lynn, K., van der Stok, P., Koster, M., and C. Ams&#252;ss" />
-  <meta name="dct.identifier" content="urn:ietf:id:draft-ietf-core-rd-dns-sd-latest" />
-  <meta name="dct.issued" scheme="ISO8601" content="2018-03-17" />
-  <meta name="dct.abstract" content="Resource and service discovery are complimentary.  Resource discovery provides fine-grained detail about the content of a server, while service discovery can provide a scalable method to locate servers in large networks.  This document defines a method for mapping between CoRE Link Format attributes and DNS-Based Service Discovery fields to facilitate the use of either method to locate RESTful service interfaces (APIs) in mixed HTTP/CoAP environments." />
-  <meta name="description" content="Resource and service discovery are complimentary.  Resource discovery provides fine-grained detail about the content of a server, while service discovery can provide a scalable method to locate servers in large networks.  This document defines a method for mapping between CoRE Link Format attributes and DNS-Based Service Discovery fields to facilitate the use of either method to locate RESTful service interfaces (APIs) in mixed HTTP/CoAP environments." />
+  <meta name="dct.identifier" content="urn:ietf:id:draft-ietf-core-rd-dns-sd-03" />
+  <meta name="dct.issued" scheme="ISO8601" content="2018-10-22" />
+  <meta name="dct.abstract" content="Resource and service discovery are complimentary.  Resource discovery provides fine-grained detail about the content of a server, while service discovery can provide a scalable method to locate servers in large networks.  This document defines a method for mapping between CoRE Link Format attributes and DNS-Based Service Discovery fields to facilitate the use of either method to locate RESTful service interfaces (APIs) in heterogeneous HTTP/CoAP environments." />
+  <meta name="description" content="Resource and service discovery are complimentary.  Resource discovery provides fine-grained detail about the content of a server, while service discovery can provide a scalable method to locate servers in large networks.  This document defines a method for mapping between CoRE Link Format attributes and DNS-Based Service Discovery fields to facilitate the use of either method to locate RESTful service interfaces (APIs) in heterogeneous HTTP/CoAP environments." />
 
 </head>
 
@@ -324,14 +326,18 @@ address {
 </tr>
 <tr>
 <td class="left">Internet-Draft</td>
-<td class="right">P. van der Stok</td>
+<td class="right">Oracle + Dyn</td>
 </tr>
 <tr>
 <td class="left">Intended status: Standards Track</td>
+<td class="right">P. van der Stok</td>
+</tr>
+<tr>
+<td class="left">Expires: April 25, 2019</td>
 <td class="right">Consultant</td>
 </tr>
 <tr>
-<td class="left">Expires: September 18, 2018</td>
+<td class="left"></td>
 <td class="right">M. Koster</td>
 </tr>
 <tr>
@@ -348,7 +354,7 @@ address {
 </tr>
 <tr>
 <td class="left"></td>
-<td class="right">March 17, 2018</td>
+<td class="right">October 22, 2018</td>
 </tr>
 
     	
@@ -356,15 +362,15 @@ address {
   </table>
 
   <p class="title">CoRE Resource Directory: DNS-SD mapping<br />
-  <span class="filename">draft-ietf-core-rd-dns-sd-latest</span></p>
+  <span class="filename">draft-ietf-core-rd-dns-sd-03</span></p>
   
   <h1 id="rfc.abstract"><a href="#rfc.abstract">Abstract</a></h1>
-<p>Resource and service discovery are complimentary.  Resource discovery provides fine-grained detail about the content of a server, while service discovery can provide a scalable method to locate servers in large networks.  This document defines a method for mapping between CoRE Link Format attributes and DNS-Based Service Discovery fields to facilitate the use of either method to locate RESTful service interfaces (APIs) in mixed HTTP/CoAP environments.</p>
+<p>Resource and service discovery are complimentary.  Resource discovery provides fine-grained detail about the content of a server, while service discovery can provide a scalable method to locate servers in large networks.  This document defines a method for mapping between CoRE Link Format attributes and DNS-Based Service Discovery fields to facilitate the use of either method to locate RESTful service interfaces (APIs) in heterogeneous HTTP/CoAP environments.</p>
 <h1 id="rfc.status"><a href="#rfc.status">Status of This Memo</a></h1>
 <p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
 <p>Internet-Drafts are working documents of the Internet Engineering Task Force (IETF).  Note that other groups may also distribute working documents as Internet-Drafts.  The list of current Internet-Drafts is at https://datatracker.ietf.org/drafts/current/.</p>
 <p>Internet-Drafts are draft documents valid for a maximum of six months and may be updated, replaced, or obsoleted by other documents at any time.  It is inappropriate to use Internet-Drafts as reference material or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on September 18, 2018.</p>
+<p>This Internet-Draft will expire on April 25, 2019.</p>
 <h1 id="rfc.copyrightnotice"><a href="#rfc.copyrightnotice">Copyright Notice</a></h1>
 <p>Copyright (c) 2018 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents (https://trustee.ietf.org/license-info) in effect on the date of publication of this document.  Please review these documents carefully, as they describe your rights and restrictions with respect to this document.  Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.</p>
@@ -378,37 +384,41 @@ address {
 </li>
 <ul><li>1.1.   <a href="#rfc.section.1.1">Terminology</a>
 </li>
-<li>1.2.   <a href="#rfc.section.1.2">Resource Discovery</a>
+<li>1.2.   <a href="#rfc.section.1.2">CoRE Resource Discovery</a>
 </li>
-<li>1.3.   <a href="#rfc.section.1.3">Resource Directories</a>
+<li>1.3.   <a href="#rfc.section.1.3">CoRE Resource Directories</a>
 </li>
 <li>1.4.   <a href="#rfc.section.1.4">DNS-Based Service Discovery</a>
 </li>
-</ul><li>2.   <a href="#rfc.section.2">New Link-Format Attributes</a>
+</ul><li>2.   <a href="#rfc.section.2">Mapping from web resources DNS services</a>
 </li>
-<ul><li>2.1.   <a href="#rfc.section.2.1">Resource Instance attribute &#8220;ins&#8221;</a>
+<ul><li>2.1.   <a href="#rfc.section.2.1">Domain mapping</a>
 </li>
-<li>2.2.   <a href="#rfc.section.2.2">Export attribute &#8220;exp&#8221;</a>
+<li>2.2.   <a href="#rfc.section.2.2">ServiceType mapping</a>
 </li>
-</ul><li>3.   <a href="#rfc.section.3">Mapping CoRE Link Attributes to DNS-SD Record Fields</a>
+<li>2.3.   <a href="#rfc.section.2.3">Instance mapping</a>
 </li>
-<ul><li>3.1.   <a href="#rfc.section.3.1">Mapping Resource Instance attribute &#8220;ins&#8221; to &lt;Instance&gt;</a>
+</ul><li>3.   <a href="#rfc.section.3">New Link-Format Attributes</a>
 </li>
-<li>3.2.   <a href="#rfc.section.3.2">Mapping Resource Type attribute &#8220;rt&#8221; to &lt;ServiceType&gt;</a>
+<ul><li>3.1.   <a href="#rfc.section.3.1">Export attribute &#8220;exp&#8221;</a>
 </li>
-<li>3.3.   <a href="#rfc.section.3.3">Domain mapping</a>
+<li>3.2.   <a href="#rfc.section.3.2">Resource Instance attribute &#8220;ins&#8221;</a>
 </li>
-<li>3.4.   <a href="#rfc.section.3.4">TXT Record key=value strings</a>
+</ul><li>4.   <a href="#rfc.section.4">Mapping CoRE Link Attributes to DNS-SD Record Fields</a>
 </li>
-<li>3.5.   <a href="#rfc.section.3.5">Importing resource links into DNS-SD</a>
+<ul><li>4.1.   <a href="#rfc.section.4.1">Mapping Resource Instance attribute &#8220;ins&#8221; to &lt;Instance&gt;</a>
 </li>
-</ul><li>4.   <a href="#rfc.section.4">Examples</a>
+<li>4.2.   <a href="#rfc.section.4.2">Mapping Resource Type attribute &#8220;rt&#8221; to &lt;ServiceType&gt;</a>
 </li>
-<ul><li>4.1.   <a href="#rfc.section.4.1">DNS entries</a>
+<li>4.3.   <a href="#rfc.section.4.3">TXT Record key=value strings</a>
+</li>
+<li>4.4.   <a href="#rfc.section.4.4">Exporting resource links into DNS-SD</a>
 </li>
 </ul><li>5.   <a href="#rfc.section.5">IANA considerations</a>
 </li>
-<li>6.   <a href="#rfc.section.6">Security considerations</a>
+<ul><li>5.1.   <a href="#rfc.section.5.1">Mapping Resource Type into ServiceType</a>
+</li>
+</ul><li>6.   <a href="#rfc.section.6">Security considerations</a>
 </li>
 <li>7.   <a href="#rfc.references">References</a>
 </li>
@@ -416,7 +426,7 @@ address {
 </li>
 <li>7.2.   <a href="#rfc.references.2">Informative References</a>
 </li>
-</ul><li><a href="#rfc.acknowledgements">Acknowledgements</a>
+</ul><li>Appendix A.   <a href="#rfc.appendix.A">Acknowledgments</a>
 </li>
 <li><a href="#rfc.authors">Authors' Addresses</a>
 </li>
@@ -429,144 +439,140 @@ address {
 </h1>
 <p id="rfc.section.1.p.1">The Constrained RESTful Environments (CoRE) working group aims at realizing the REST architecture in a suitable form for the most constrained devices (e.g. 8-bit microcontrollers with limited RAM and ROM) and networks (e.g. 6LoWPAN).  CoRE is aimed at machine-to- machine (M2M) applications such as smart energy and building automation.  The main deliverable of CoRE is the Constrained Application Protocol (CoAP) specification <a href="#RFC7252" class="xref">[RFC7252]</a>.</p>
 <p id="rfc.section.1.p.2">Automated discovery of resources hosted by a constrained server is critical in M2M applications where human intervention is minimal and static interfaces result in brittleness.  CoRE Resource Discovery is intended to support fine-grained discovery of hosted resources, their attributes, and possibly other resource relations <a href="#RFC6690" class="xref">[RFC6690]</a>.</p>
-<p id="rfc.section.1.p.3">In contrast, service discovery generally refers to a coarse-grained resolution of an end-point&#8217;s IP address, port number, and protocol.  This definition may be extended to include multi-function devices, where the result of the discovery process may include a path to a resource representing a RESTful service interface and possibly a reference to a description of the interface such as a JSON Hyper-Schema document <a href="#I-D.handrews-json-schema-hyperschema" class="xref">[I-D.handrews-json-schema-hyperschema]</a>.</p>
-<p id="rfc.section.1.p.4">Resource and service discovery are complimentary in the case of large networks, where the latter can facilitate scaling.  This document defines a mapping between CoRE Link Format attributes and DNS-Based Service Discovery (DNS-SD) <a href="#RFC6763" class="xref">[RFC6763]</a> fields that permits discovery of CoAP services by either means.  It also addresses the CoRE charter goal to interoperate with DNS-SD.</p>
+<p id="rfc.section.1.p.3">In contrast to resource discovery, service discovery generally refers to a coarser-grained resolution of an endpoint&#8217;s IP address, port number, and protocol.  This definition may be extended to include multi-function devices, where the result of the discovery process may include a path to a resource representing a RESTful service interface and possibly a reference to a description of the interface such as a JSON Hyper-Schema document <a href="#I-D.handrews-json-schema-hyperschema" class="xref">[I-D.handrews-json-schema-hyperschema]</a> per function.</p>
+<p id="rfc.section.1.p.4">Resource and service discovery are complimentary in the case of large networks, where the latter can facilitate scaling.  This document defines a mapping between CoRE Link Format attributes and DNS-Based Service Discovery (DNS-SD) <a href="#RFC6763" class="xref">[RFC6763]</a> fields that permits discovery of CoAP services by either method.  It also addresses the CoRE charter goal to interoperate with DNS-SD.</p>
+<p id="rfc.section.1.p.5">The actual publishing of DNS services on the basis of the contents of the Resource Directory is the subject of <a href="#I-D.sctl-service-registration" class="xref">[I-D.sctl-service-registration]</a>.</p>
 <h1 id="rfc.section.1.1">
 <a href="#rfc.section.1.1">1.1.</a> <a href="#terminology" id="terminology">Terminology</a>
 </h1>
-<p id="rfc.section.1.1.p.1">The key words &#8220;MUST&#8221;, &#8220;MUST NOT&#8221;, &#8220;REQUIRED&#8221;, &#8220;SHALL&#8221;, &#8220;SHALL NOT&#8221;, &#8220;SHOULD&#8221;, &#8220;SHOULD NOT&#8221;, &#8220;RECOMMENDED&#8221;, &#8220;NOT RECOMMENDED&#8221;, &#8220;MAY&#8221;, and &#8220;OPTIONAL&#8221; in this document are to be interpreted as described in <a href="#RFC2119" class="xref">[RFC2119]</a>. The term &#8220;byte&#8221; is used in its now customary sense as a synonym for &#8220;octet&#8221;.</p>
-<p id="rfc.section.1.1.p.2">This specification requires readers to be familiar with all the terms and concepts that are discussed in {-link} and <a href="#RFC6690" class="xref">[RFC6690]</a>. Readers should also be familiar with the terms and concepts discussed in <a href="#RFC7252" class="xref">[RFC7252]</a>.  To describe the REST interfaces defined in this specification, the URI Template format is used <a href="#RFC6570" class="xref">[RFC6570]</a>.</p>
-<p id="rfc.section.1.1.p.3">This specification also makes use of the terminology of <a href="#I-D.ietf-core-resource-directory" class="xref">[I-D.ietf-core-resource-directory]</a>.</p>
+<p id="rfc.section.1.1.p.1">The key words &#8220;MUST&#8221;, &#8220;MUST NOT&#8221;, &#8220;REQUIRED&#8221;, &#8220;SHALL&#8221;, &#8220;SHALL NOT&#8221;, &#8220;SHOULD&#8221;, &#8220;SHOULD NOT&#8221;, &#8220;RECOMMENDED&#8221;, &#8220;NOT RECOMMENDED&#8221;, &#8220;MAY&#8221;, and &#8220;OPTIONAL&#8221; in this document are to be interpreted as described in <a href="#RFC2119" class="xref">[RFC2119]</a>. The term &#8220;byte&#8221; is used in its now conventional sense as a synonym for &#8220;octet&#8221;.</p>
+<p id="rfc.section.1.1.p.2">This specification requires readers to be familiar with all the terms and concepts that are discussed in <a href="#RFC6690" class="xref">[RFC6690]</a> and <a href="#RFC8288" class="xref">[RFC8288]</a>. Readers should also be familiar with the terms and concepts discussed in <a href="#RFC7252" class="xref">[RFC7252]</a>.  To describe the REST interfaces defined in this specification, the URI Template format is used <a href="#RFC6570" class="xref">[RFC6570]</a>.</p>
+<p id="rfc.section.1.1.p.3">This specification also incorporates the terminology of <a href="#I-D.ietf-core-resource-directory" class="xref">[I-D.ietf-core-resource-directory]</a>.</p>
 <h1 id="rfc.section.1.2">
-<a href="#rfc.section.1.2">1.2.</a> <a href="#resource-discovery" id="resource-discovery">Resource Discovery</a>
+<a href="#rfc.section.1.2">1.2.</a> <a href="#core-resource-discovery" id="core-resource-discovery">CoRE Resource Discovery</a>
 </h1>
-<p id="rfc.section.1.2.p.1">The main function of Resource Discovery is to provide Universal Resource Identifiers (URIs, also called &#8220;links&#8221;) for the resources hosted by the server, complemented by attributes about those resources and perhaps additional link relations.  In CoRE this collection of links and attributes is itself a resource (as opposed to HTTP headers delivered with a specific resource).</p>
-<p><a href="#RFC6690" class="xref">[RFC6690]</a> specifies a link format for use in CoRE Resource Discovery by extending the HTTP Link Header Format <a href="#RFC8288" class="xref">[RFC8288]</a> to describe these link descriptions.  The CoRE Link Format is carried as a payload and is assigned an Internet media type.  A well-known URI &#8220;/.well-known/ core&#8221; is defined as a default entry-point for requesting the list of links about resources hosted by a server, and thus performing CoRE Resource Discovery.</p>
-<p id="rfc.section.1.2.p.3">Resource Discovery can be performed either via unicast or multicast.  When a server&#8217;s IP address is already known, either a priori or resolved via the Domain Name System (DNS) <a href="#RFC1034" class="xref">[RFC1034]</a><a href="#RFC1035" class="xref">[RFC1035]</a>, unicast discovery is performed in order to locate a URI for the resource of interest.  This is performed using a GET to /.well-known/core on the server, which returns a payload in the CoRE Link Format.  A client would then match the appropriate Resource Type, Interface Description, and possible Content-Type <a href="#RFC2045" class="xref">[RFC2045]</a> for its application.  These attributes may also be included in the query string in order to filter the number of links returned in a response.</p>
+<p><a href="#RFC8288" class="xref">[RFC8288]</a> defines a Web Link (link) as a typed connection between two resources, comprised of:</p>
+<p></p>
+
+<ul>
+<li>a link context,</li>
+<li>a link relation type (see Section 2.1 of <a href="#RFC8288" class="xref">[RFC8288]</a>,</li>
+<li>a link target, and</li>
+<li>optionally, target attributes (see Section 2.2 of <a href="#RFC8288" class="xref">[RFC8288]</a>).</li>
+</ul>
+<p id="rfc.section.1.2.p.3">A link can be viewed as a statement of the form &#8220;link context has a link relation type resource at link target, which (optionally) has target attributes&#8221;, where link target (and context) is typically a Universal Resource Identifier (URI) <a href="#RFC3986" class="xref">[RFC3986]</a>.</p>
+<p id="rfc.section.1.2.p.4">For example, &#8220;https://www.example.com/&#8221; has a &#8220;canonical&#8221; resource at &#8220;https://example.com&#8221;, which has a &#8220;type&#8221; of &#8220;text/html&#8221;.</p>
+<p id="rfc.section.1.2.p.5">The main function of Resource Discovery is to return links to the resources hosted by a server, complemented by attributes about those resources and additional link relations.  In CoRE this collection of links and attributes is itself a resource (as opposed to HTTP headers delivered with a specific resource).</p>
+<p><a href="#RFC6690" class="xref">[RFC6690]</a> specifies a link format for use in CoRE Resource Discovery by extending the HTTP Link Header Format <a href="#RFC8288" class="xref">[RFC8288]</a> to describe these link descriptions.  The CoRE Link Format is carried as a payload and is serialized according to one of several Internet media types.  CoRE Resource Discovery is accomplished by sending a GET request to the well-known URI &#8220;/.well- known/core&#8221;, which is defined as a default entry-point for requesting the collection of links to resources hosted by a server.</p>
+<p id="rfc.section.1.2.p.7">Resource Discovery can be performed either via unicast or multicast.  When a server&#8217;s IP address is already known, either a priori or resolved via the Domain Name System (DNS) <a href="#RFC1034" class="xref">[RFC1034]</a><a href="#RFC1035" class="xref">[RFC1035]</a>, unicast discovery is performed in order to locate a URI for the resource of interest.  This is performed using a GET to /.well-known/core on the server, which returns the links.  A client would then match the appropriate Resource Type, Interface Description, and possible Content-Type <a href="#RFC2045" class="xref">[RFC2045]</a> for its application.  These attributes may also be included in the query string in order to filter the number of links returned in a response.</p>
 <h1 id="rfc.section.1.3">
-<a href="#rfc.section.1.3">1.3.</a> <a href="#resource-directories" id="resource-directories">Resource Directories</a>
+<a href="#rfc.section.1.3">1.3.</a> <a href="#core-resource-directories" id="core-resource-directories">CoRE Resource Directories</a>
 </h1>
-<p id="rfc.section.1.3.p.1">In many M2M scenarios, direct discovery of resources is not practical due to sleeping nodes, limited bandwidth, or networks where multicast traffic is inefficient.  These problems can be solved by deploying a network element called a Resource Directory (RD), which hosts descriptions of resources held on other servers (referred to as &#8220;end- points&#8221;) and allows lookups to be performed for those resources.  An end-point is a web server associated with specific IP address and port; thus a physical device may host one or more end-points.  End- points may also act as clients.</p>
-<p id="rfc.section.1.3.p.2">The Resource Directory implements a set of REST interfaces for end- points to register and maintain sets of Web Links, called resource directory entries.  <a href="#I-D.ietf-core-resource-directory" class="xref">[I-D.ietf-core-resource-directory]</a> specifies the web interfaces that an RD supports in order for web servers to discover the RD and to register, maintain, lookup and remove resource descriptions; for the RD to validate entries; and for clients to lookup resources from the RD.  Furthermore, new link attributes useful in conjunction with an RD are defined.</p>
+<p id="rfc.section.1.3.p.1">In many M2M scenarios, direct discovery of resources is not practical due to sleeping nodes, limited bandwidth, or networks where multicast traffic is inefficient.  These problems can be solved by deploying a network element called a Resource Directory (RD), which hosts descriptions of resources held on other servers (referred to as &#8220;end- points&#8221;) and allows lookups to be performed for those resources.  An endpoint is a web server associated with a specific IP address and port; thus a physical device may host one or more endpoints.  End- points may also act as clients.</p>
+<p id="rfc.section.1.3.p.2">The Resource Directory implements a set of REST interfaces for end- points to register and maintain collections of links, called resource directory registrations.  <a href="#I-D.ietf-core-resource-directory" class="xref">[I-D.ietf-core-resource-directory]</a> specifies the web interfaces that an RD supports for endpoints to discover the RD and to register, maintain, lookup and remove resource descriptions; for the RD to validate entries; and for clients to lookup resources from the RD.</p>
 <h1 id="rfc.section.1.4">
-<a href="#rfc.section.1.4">1.4.</a> <a href="#cheshire" id="cheshire">DNS-Based Service Discovery</a>
+<a href="#rfc.section.1.4">1.4.</a> <a href="#dns-based-service-discovery" id="dns-based-service-discovery">DNS-Based Service Discovery</a>
 </h1>
-<p id="rfc.section.1.4.p.1">DNS-Based Service Discovery (DNS-SD) defines a conventional method of configuring DNS PTR, SRV, and TXT resource records to facilitate discovery of services (such as CoAP servers in a subdomain) using the existing DNS infrastructure.  This section gives a brief overview of DNS-SD; see <a href="#RFC6763" class="xref">[RFC6763]</a> for a detailed specification.</p>
-<p id="rfc.section.1.4.p.2">DNS-SD service names are limited to 255 bytes and are of the form:</p>
+<p id="rfc.section.1.4.p.1">DNS-Based Service Discovery (DNS-SD) defines a conventional method of naming and configuring DNS PTR, SRV, and TXT resource records to facilitate discovery of services (such as CoAP servers in a subdomain) using the existing DNS infrastructure.  This section gives a brief overview of DNS-SD; for a detailed specification see <a href="#RFC6763" class="xref">[RFC6763]</a>.</p>
+<p id="rfc.section.1.4.p.2">DNS-SD Service Names are limited to 255 bytes and are of the form:</p>
 <pre>
       Service Name = &lt;Instance&gt;.&lt;ServiceType&gt;.&lt;Domain&gt;
 </pre>
-<p id="rfc.section.1.4.p.3">The service name is the label of SRV/TXT resource records. The SRV RR specifies the host and the port of the endpoint. The TXT RR provides additional information in the form of key/value pairs.</p>
-<p id="rfc.section.1.4.p.4">The &lt;Domain&gt; part of the service name is identical to the global (DNS subdomain) part of the authority in URIs that identify the resources on an individual server or group of servers.</p>
-<p id="rfc.section.1.4.p.5">The &lt;ServiceType&gt; part is composed of at least two labels.  The first label of the pair is the application protocol name <a href="#RFC6335" class="xref">[RFC6335]</a> preceded by an underscore character.  The second label indicates the transport and is always &#8220;_udp&#8221; for CoAP services.  In cases where narrowing the scope of the search may be useful, these labels may be optionally preceded by a subtype name followed by the &#8220;_sub&#8221; label.  An example of this more specific &lt;ServiceType&gt; is &#8220;lamp._sub._dali._udp&#8221;.  Only the rightmost pair of labels is used in SRV and TXT record names.</p>
-<p id="rfc.section.1.4.p.6">The default &lt;Instance&gt; part of the service name may be set at the factory or during the commissioning process.  It SHOULD uniquely identify an instance of &lt;ServiceType&gt; within a &lt;Domain&gt;.  Taken together, these three elements comprise a unique name for an SRV/ TXT record pair within the DNS subdomain.</p>
-<p id="rfc.section.1.4.p.7">The granularity of a service name MAY be that of a host or group, or it could represent a particular resource within a CoAP server.  The SRV record contains the host name (AAAA record name) and port of the service while protocol is part of the service name.  In the case where a service name identifies a particular resource, the path part of the URI must be carried in a corresponding TXT record.</p>
-<p id="rfc.section.1.4.p.8">A DNS TXT record is in practice limited to a few hundred bytes in length, which is indicated in the resource record header in the DNS response message <a href="#RFC6763" class="xref">[RFC6763]</a>.  The data consists of one or more strings comprising a key=value pair.  By convention, the first pair is txtver=&lt;number&gt; (to support different versions of a service description).  An example string is:</p>
+<p id="rfc.section.1.4.p.3">The Service Name identifies a SRV/TXT resource record (RR) pair.  The SRV RR specifies the host and port of an endpoint.  The TXT RR provides additional information in the form of key/value pairs.  DNS-Based Service Discovery is accomplished by sending a DNS request for PTR records with the name &lt;ServiceType&gt;.&lt;Domain&gt;, which will return a list of zero or more Service Names.</p>
+<p id="rfc.section.1.4.p.4">The &lt;Domain&gt; part of the Service Name is identical to the global (DNS subdomain) part of the authority in URIs that identify the resources on an individual server or group of servers.</p>
+<p id="rfc.section.1.4.p.5">The &lt;ServiceType&gt; part is composed of at least two labels.  The first label of the pair is the application protocol name <a href="#RFC6335" class="xref">[RFC6335]</a> preceded by an underscore character.  For example, an organization such as the Open Connectivity Foundation <a href="#OCF" class="xref">[OCF]</a> that specifies resources might register the application protocol name &#8220;_oic&#8221;, which all servers that advertise OCF resources would use as part of their ServiceType.  The second label indicates the transport and is typically &#8220;_udp&#8221; for CoAP services.  In cases where narrowing the scope of the search may be useful, these labels may be optionally preceded by a subtype name followed by the &#8220;_sub&#8221; label.  An example of this more specific &lt;ServiceType&gt; is &#8220;light._sub._oic._udp&#8221;.</p>
+<p id="rfc.section.1.4.p.6">The default &lt;Instance&gt; part of the Service Name SHOULD be set to a default value at the factory and MAY be modified during the commissioning process.  It MUST uniquely identify an instance of &lt;ServiceType&gt; within a &lt;Domain&gt;.  Taken together, these three elements comprise a unique name for an SRV/TXT record pair within the DNS subdomain.</p>
+<p id="rfc.section.1.4.p.7">The granularity of a Service Name MAY be that of a host or group, or it might represent a particular resource within a CoAP server.  The SRV record contains the host name (AAAA record name) and port of the endpoint while protocol is part of the Service Name.  In the case where a Service Name identifies a particular resource, the path part of the URI must be carried in a corresponding TXT record.</p>
+<p id="rfc.section.1.4.p.8">A DNS TXT record is in practice limited to a few hundred bytes in length, which is indicated in the resource record header in the DNS response message <a href="#RFC6763" class="xref">[RFC6763]</a>.  The data consists of one or more strings comprising a key/value pair.  By convention, the first pair is txtver=&lt;number&gt; (to support different versions of a service description).  An example string is:</p>
 <pre>
+              ----------------------------------------
               | 0x08 | t | x | t | v | e | r | = | 1 |
+              ----------------------------------------
 </pre>
 <h1 id="rfc.section.2">
-<a href="#rfc.section.2">2.</a> <a href="#attributes" id="attributes">New Link-Format Attributes</a>
+<a href="#rfc.section.2">2.</a> <a href="#mapping-from-web-resources-dns-services" id="mapping-from-web-resources-dns-services">Mapping from web resources DNS services</a>
 </h1>
-<p id="rfc.section.2.p.1">When using the CoRE Link Format to describe resources being discovered by or posted to a resource directory service, additional information about those resources is useful. This specification defines the following new attributes for use in the CoRE Link Format <a href="#RFC6690" class="xref">[RFC6690]</a>:</p>
+<p id="rfc.section.2.p.1">These sections describe how each of the three parts of the Service Name can be mapped to link attributes.</p>
+<h1 id="rfc.section.2.1">
+<a href="#rfc.section.2.1">2.1.</a> <a href="#domain-mapping" id="domain-mapping">Domain mapping</a>
+</h1>
+<p id="rfc.section.2.1.p.1">TBD: A method must be specified to determine in which DNS zone the CoAP service should be registered.  See, for example, Section 11 in <a href="#RFC6763" class="xref">[RFC6763]</a> and Section 2 in <a href="#I-D.sctl-service-registration" class="xref">[I-D.sctl-service-registration]</a></p>
+<h1 id="rfc.section.2.2">
+<a href="#rfc.section.2.2">2.2.</a> <a href="#servicetype-mapping" id="servicetype-mapping">ServiceType mapping</a>
+</h1>
+<p id="rfc.section.2.2.p.1">ServiceTypes are registered by IANA <a href="#st" class="xref">[st]</a>. They identify services that can be specified by IETF or any other Standards Development Organization (SDO). The IANA resource type registry <a href="#rt" class="xref">[rt]</a> is based on the resource type (rt= attribute) <a href="#RFC6690" class="xref">[RFC6690]</a> which identifies endpoint functionality specified by IETF or any other SDO.</p>
+<p id="rfc.section.2.2.p.2">It is expected that an endpoint providing a given ServiceType represents a collection of resources each with its own Resource Type. The Resource Type of the collection MUST be mapped directly to the ServiceType. A registry is required to specify the mapping between Resource Types and ServiceTypes.</p>
+<h1 id="rfc.section.2.3">
+<a href="#rfc.section.2.3">2.3.</a> <a href="#instance-mapping" id="instance-mapping">Instance mapping</a>
+</h1>
+<p id="rfc.section.2.3.p.1">The Instance name may be freely chosen by the manufacturer and inserted in the device. During installation the pre-configured Instance name can be pre- or post-fixed with a string to make the (Instance, ServiceType) pair unique within the domain. For manual discovery it is useful when the Instance name  is a human readable string containing the manufacturer name or the device type.</p>
+<p id="rfc.section.2.3.p.2">IoT devices are not necessarily equipped with an Instance name for DNS-SD. To make the (Instance, ServiceType) pair unique, it is sufficient to use another unique identifier stored in the device such as the Public key or UUID of the device. When a human readable name is required, the interface description (if= attribute) <a href="#RFC6690" class="xref">[RFC6690]</a> may provide for example, a URN that can be made unique by pre- or post-fixing it with a string as is currently done for the Instance name devices conforming to DNS-SD specification.</p>
+<p id="rfc.section.2.3.p.3">When the device selects the Instance name, the device, registering with the RD, MUST provide an Instance name in its link. When a third party device, the Commissioning Tool (CT) <a href="#I-D.ietf-core-resource-directory" class="xref">[I-D.ietf-core-resource-directory]</a>, selects the Instance name, it specifies the Instance name when registering the device with the Resource Directory.</p>
+<h1 id="rfc.section.3">
+<a href="#rfc.section.3">3.</a> <a href="#attributes" id="attributes">New Link-Format Attributes</a>
+</h1>
+<p id="rfc.section.3.p.1">When using the CoRE Link Format to describe resources being discovered by or posted to a resource directory service, additional information about those resources is useful. This specification defines the following new attributes for use in the CoRE Link Format <a href="#RFC6690" class="xref">[RFC6690]</a>:</p>
 <pre>
+   link-extension    = ( "exp" )
    link-extension    = ( "ins" "=" (ptoken | quoted-string) )
                        ; The token or string is max 63 bytes
-   link-extension    = ( "exp" )
 </pre>
-<h1 id="rfc.section.2.1">
-<a href="#rfc.section.2.1">2.1.</a> <a href="#resource-instance-attribute-ins" id="resource-instance-attribute-ins">Resource Instance attribute &#8220;ins&#8221;</a>
-</h1>
-<p id="rfc.section.2.1.p.1">The Resource Instance &#8220;ins&#8221; attribute is an identifier for this resource, which makes it possible to distinguish it from other similar resources. This attribute is similar in use to the &lt;Instance&gt; portion of a DNS-SD record (see <a href="#cheshire" class="xref">Section 1.4</a>, and SHOULD be unique across resources with the same Resource Type attribute in the domain it is used. A Resource Instance might be a descriptive string like &#8220;Ceiling Light, Room 3&#8221;, a short ID like &#8220;AF39&#8221; or a unique UUID or iNumber. This attribute is used by a Resource Directory to distinguish between multiple instances of the same resource type within the directory.</p>
-<p id="rfc.section.2.1.p.2">This attribute MUST be no more than 63 bytes in length. The resource identifier attribute MUST NOT appear more than once in a link description.  This attribute MAY be used as a query parameter in the RD Lookup Function Set defined in Section 7 of <a href="#I-D.ietf-core-resource-directory" class="xref">[I-D.ietf-core-resource-directory]</a>.</p>
-<h1 id="rfc.section.2.2">
-<a href="#rfc.section.2.2">2.2.</a> <a href="#export-attribute-exp" id="export-attribute-exp">Export attribute &#8220;exp&#8221;</a>
-</h1>
-<p id="rfc.section.2.2.p.1">The Export &#8220;exp&#8221; attribute is used as a flag to indicate that a link description MAY be exported by a resource directory to external directories.</p>
-<p id="rfc.section.2.2.p.2">The CoRE Link Format is used for many purposes between CoAP endpoints. Some are useful mainly locally, for example checking the observability of a resource before accessing it, determining the size of a resource, or traversing dynamic resource structures. However, other links are very useful to be exported to other directories, for example the entry point resource to a functional service.  This attribute MAY be used as a query parameter in the RD Lookup Function Set defined in Section 7 of <a href="#I-D.ietf-core-resource-directory" class="xref">[I-D.ietf-core-resource-directory]</a>.</p>
-<h1 id="rfc.section.3">
-<a href="#rfc.section.3">3.</a> <a href="#mapping-core-link-attributes-to-dns-sd-record-fields" id="mapping-core-link-attributes-to-dns-sd-record-fields">Mapping CoRE Link Attributes to DNS-SD Record Fields</a>
-</h1>
 <h1 id="rfc.section.3.1">
-<a href="#rfc.section.3.1">3.1.</a> <a href="#ins" id="ins">Mapping Resource Instance attribute &#8220;ins&#8221; to &lt;Instance&gt;</a>
+<a href="#rfc.section.3.1">3.1.</a> <a href="#export-attribute-exp" id="export-attribute-exp">Export attribute &#8220;exp&#8221;</a>
 </h1>
-<p id="rfc.section.3.1.p.1">The Resource Instance &#8220;ins&#8221; attribute maps to the &lt;Instance&gt; part of a DNS-SD service name.  It is stored directly in the DNS as a single DNS label of canonical precomposed UTF-8 <a href="#RFC3629" class="xref">[RFC3629]</a> &#8220;Net-Unicode&#8221; (Unicode Normalization Form C) <a href="#RFC5198" class="xref">[RFC5198]</a> text.  However, to the extent that the &#8220;ins&#8221; attribute may be chosen to match the DNS host name of a service, it SHOULD use the syntax defined in Section 3.5 of <a href="#RFC1034" class="xref">[RFC1034]</a> and Section 2.1 of <a href="#RFC1123" class="xref">[RFC1123]</a>.</p>
-<p id="rfc.section.3.1.p.2">The &lt;Instance&gt; part of the name of a service being offered on the network SHOULD be configurable by the user setting up the service, so that he or she may give it an informative name.  However, the device or service SHOULD NOT require the user to configure a name before it can be used.  A sensible choice of default name can allow the device or service to be accessed in many cases without any manual configuration at all.  The default name should be short and descriptive, and MAY include a collision-resistant substring such as the lower bits of the device&#8217;s MAC address, serial number, fingerprint, or other identifier in an attempt to make the name relatively unique.</p>
-<p id="rfc.section.3.1.p.3">DNS labels are currently limited to 63 bytes in length and the entire service name may not exceed 255 bytes.</p>
+<p id="rfc.section.3.1.p.1">The Export &#8220;exp&#8221; attribute is used as a flag to indicate that a link description MAY be exported from a resource directory to external directories.</p>
+<p id="rfc.section.3.1.p.2">The CoRE Link Format is used for many purposes between CoAP endpoints. Some are useful mainly locally; for example checking the observability of a resource before accessing it, determining the size of a resource, or traversing dynamic resource structures. However, other links are very useful to be exported to other directories, for example the entry point resource to a functional service.  This attribute MAY be used as a query parameter in the RD Lookup Function Set defined in Section 7 of <a href="#I-D.ietf-core-resource-directory" class="xref">[I-D.ietf-core-resource-directory]</a>.</p>
 <h1 id="rfc.section.3.2">
-<a href="#rfc.section.3.2">3.2.</a> <a href="#exp" id="exp">Mapping Resource Type attribute &#8220;rt&#8221; to &lt;ServiceType&gt;</a>
+<a href="#rfc.section.3.2">3.2.</a> <a href="#resource-instance-attribute-ins" id="resource-instance-attribute-ins">Resource Instance attribute &#8220;ins&#8221;</a>
 </h1>
-<p id="rfc.section.3.2.p.1">The resource type &#8220;rt&#8221; attribute is mapped into the &lt;ServiceType&gt; part of a DNS-SD service name and SHOULD conform to the reg-rel-type production of the Link Format defined in Section 2 of <a href="#RFC6690" class="xref">[RFC6690]</a>.  The &#8220;rt&#8221; attribute MUST be composed of at least a single Net-Unicode text string, without underscore &#8216;_&#8217; or period &#8216;.&#8217; and limited to 15 bytes in length, which represents the application protocol name.  This string is mapped to the DNS-SD &lt;ServiceType&gt; by prepending an underscore and appending a period followed by the &#8220;_udp&#8221; label.  For example, rt=&#8221;dali&#8221; is mapped into &#8220;_dali._udp&#8221;.</p>
-<p id="rfc.section.3.2.p.2">The application protocol name may be optionally followed by a period and a service subtype name consisting of a Net-Unicode text string, without underscore or period and limited to 63 bytes.  This string is mapped to the DNS-SD &lt;ServiceType&gt; by appending a period followed by the &#8220;_sub&#8221; label and then appending a period followed by the service type label pair derived as in the previous paragraph.  For example, rt=&#8221;dali.light&#8221; is mapped into &#8220;light._sub._dali._udp&#8221;.</p>
-<p id="rfc.section.3.2.p.3">The resulting string is used to form labels for DNS-SD records which are stored directly in the DNS.</p>
-<h1 id="rfc.section.3.3">
-<a href="#rfc.section.3.3">3.3.</a> <a href="#domain" id="domain">Domain mapping</a>
-</h1>
-<p id="rfc.section.3.3.p.1">TBD: A method must be specified to determine in which DNS zone the CoAP service should be registered.  See, for example, Section 11 in <a href="#RFC6763" class="xref">[RFC6763]</a>.</p>
-<h1 id="rfc.section.3.4">
-<a href="#rfc.section.3.4">3.4.</a> <a href="#TXT" id="TXT">TXT Record key=value strings</a>
-</h1>
-<p id="rfc.section.3.4.p.1">A number of <a href="#RFC6763" class="xref">[RFC6763]</a> key/value pairs are derived from link-format information, to be exported in the DNS-SD as key=value strings in a TXT record (<a href="#RFC6763" class="xref">[RFC6763]</a>, Section 6.3).</p>
-<p id="rfc.section.3.4.p.2">The resource &lt;URI&gt; is exported as key/value pair &#8220;path=&lt;URI&gt;&#8221;.</p>
-<p id="rfc.section.3.4.p.3">The Interface Description &#8220;if&#8221; attribute is exported as key/value pair &#8220;if=&lt;Interface Description&gt;&#8221;.</p>
-<p id="rfc.section.3.4.p.4">The DNS TXT record can be further populated by importing any other resource description attributes as they share the same key=value format specified in Section 6 of <a href="#RFC6763" class="xref">[RFC6763]</a>.</p>
-<h1 id="rfc.section.3.5">
-<a href="#rfc.section.3.5">3.5.</a> <a href="#import" id="import">Importing resource links into DNS-SD</a>
-</h1>
-<p id="rfc.section.3.5.p.1">Assuming the ability to query a Resource Directory or multicast a GET (?exp) over the local link, CoAP resource discovery may be used to populate the DNS-SD database in an automated fashion.  CoAP resource descriptions (links) can be exported to DNS-SD for exposure to service discovery by using the Resource Instance attribute as the basis for a unique service name, composed with the Resource Type as the &lt;ServiceType&gt;, and registered in the correct &lt;Domain&gt;.  The agent responsible for exporting records to the DNS zone file SHOULD be authenticated to the DNS server.  The following example, using the example lookup location /rd-lookup, shows an agent discovering a resource to be exported:</p>
-<pre>
-   Req: GET /rd-lookup/res?exp
-
-   Res: 2.05 Content
-   &lt;coap://[FDFD::1234]:5683/light/1&gt;;
-     exp;rt="dali.light";ins="Spot";
-               d="office";ep="node1"
-
-</pre>
-<p id="rfc.section.3.5.p.2">The agent subsequently registers the following DNS-SD RRs, assuming a zone name &#8220;example.com&#8221; prefixed with &#8220;office&#8221;:</p>
-<pre>
-node1.office.example.com.          IN AAAA        FDFD::1234
-_dali._udp.office.example.com      IN PTR
-                          Spot._dali._udp.office.example.com
-light._sub._dali._udp.example.com  IN PTR
-                          Spot._dali._udp.office.example.com
-Spot._dali._udp.office.example.com IN SRV  0 0 5683
-                          node1.office.example.com.
-Spot._dali._udp.office.example.com IN TXT
-                          txtver=1;path=/light/1
-</pre>
-<p id="rfc.section.3.5.p.3">In the above figure the Service Name is chosen as Spot._dali._udp.office.example.com without the light._sub service prefix. An alternative Service Name would be: Spot.light._sub._dali._udp.office.example.com.</p>
+<p id="rfc.section.3.2.p.1">The Resource Instance &#8220;ins&#8221; attribute is an identifier for this resource, which makes it possible to distinguish it from other similar resources. This attribute is equivalent in use to the &lt;Instance&gt; portion of a DNS-SD record (see Section 1.4), and SHOULD be unique across resources with the same Resource Type attribute in the domain in which it is used. A Resource Instance SHOULD be a descriptive string like &#8220;Ceiling Light, Room 3&#8221;, but MAY be a short ID like &#8220;AF39&#8221;, a unique UUID, or fingerprint of a public key.  This attribute is used by a Resource Directory to distinguish between multiple instances of the same resource type within the directory.</p>
+<p id="rfc.section.3.2.p.2">This attribute MUST NOT be more than 63 bytes in length. The resource identifier attribute MUST NOT appear more than once in a link description.  This attribute MAY be used as a query parameter in the RD Lookup Function Set defined in Section 7 of <a href="#I-D.ietf-core-resource-directory" class="xref">[I-D.ietf-core-resource-directory]</a>.</p>
 <h1 id="rfc.section.4">
-<a href="#rfc.section.4">4.</a> <a href="#examples" id="examples">Examples</a>
+<a href="#rfc.section.4">4.</a> <a href="#dns-sd" id="dns-sd">Mapping CoRE Link Attributes to DNS-SD Record Fields</a>
 </h1>
 <h1 id="rfc.section.4.1">
-<a href="#rfc.section.4.1">4.1.</a> <a href="#dns-en" id="dns-en">DNS entries</a>
+<a href="#rfc.section.4.1">4.1.</a> <a href="#mapping-resource-instance-attribute-ins-to-ltinstancegt" id="mapping-resource-instance-attribute-ins-to-ltinstancegt">Mapping Resource Instance attribute &#8220;ins&#8221; to &lt;Instance&gt;</a>
 </h1>
-<p id="rfc.section.4.1.p.1">It may be profitable to discover the light groups for applications, which are unaware ot the existence of the RD. An agent needs to query the RD to return all groups which are exported to be inserted into DNS.</p>
+<p id="rfc.section.4.1.p.1">The Resource Instance &#8220;ins&#8221; attribute maps to the &lt;Instance&gt; part of a DNS-SD Service Name.  It is stored directly in the DNS as a single DNS label of canonical precomposed UTF-8 <a href="#RFC3629" class="xref">[RFC3629]</a> &#8220;Net-Unicode&#8221; (Unicode Normalization Form C) <a href="#RFC5198" class="xref">[RFC5198]</a> text.  However, if the &#8220;ins&#8221; attribute is chosen to match the DNS host name of a service, it SHOULD use the syntax defined in Section 3.5 of <a href="#RFC1034" class="xref">[RFC1034]</a> and Section 2.1 of <a href="#RFC1123" class="xref">[RFC1123]</a>.</p>
+<p id="rfc.section.4.1.p.2">The &lt;Instance&gt; part of the name of a service being offered on the network SHOULD be configurable by the user setting up the service, so that he or she may give it an informative name.  However, the device or service SHOULD NOT require the user to configure a name before it can be used.  A sensible choice of default name can allow the device or service to be accessed in many cases without any manual configuration at all (see Appendix D of <a href="#RFC6763" class="xref">[RFC6763]</a>).</p>
+<p id="rfc.section.4.1.p.3">DNS labels are limited to 63 bytes in length and the entire Service Name may not exceed 255 bytes.</p>
+<h1 id="rfc.section.4.2">
+<a href="#rfc.section.4.2">4.2.</a> <a href="#mapping-resource-type-attribute-rt-to-ltservicetypegt" id="mapping-resource-type-attribute-rt-to-ltservicetypegt">Mapping Resource Type attribute &#8220;rt&#8221; to &lt;ServiceType&gt;</a>
+</h1>
+<p id="rfc.section.4.2.p.1">The &lt;ServiceType&gt; part of a DNS-SD Service Name is derived from the &#8220;rt&#8221; attribute and SHOULD conform to the reg-rel-type production of the Link Format defined in Section 2 of <a href="#RFC6690" class="xref">[RFC6690]</a>.</p>
+<p id="rfc.section.4.2.p.2">In practice, the ServiceType should unambiguously identify inter- operable devices.  It is up to individual SDOs to specify how to map between their registered Resource Type (rt=) values and ServiceType values.  Two approaches are possible; either a hierachical approach as in Section 1.4 above, or a flat identifier.  Both approaches are shown below for illustration, but in practice only ONE would be specified.</p>
+<p id="rfc.section.4.2.p.3">In either case, the resulting application protocol name MUST be composed of at least a single Net-Unicode text string, without underscore &#8216;_&#8217; or or period &#8216;.&#8217; and limited to 15 bytes in length (see Section 5.1 of <a href="#RFC6335" class="xref">[RFC6335]</a>).  This string is mapped to the DNS-SD &lt;ServiceType&gt; by prepending an underscore and appending a period followed by the &#8220;_udp&#8221; label.  For example, rt=&#8221;oic.d.light&#8221; might be mapped into &#8220;_oic-d-light._udp&#8221;.</p>
+<p id="rfc.section.4.2.p.4">The application protocol name may be optionally followed by a period and a service subtype name consisting of a Net-Unicode text string, without underscore or period and limited to 63 bytes.  This string is mapped to the DNS-SD &lt;ServiceType&gt; by appending a period followed by the &#8220;_sub&#8221; label and then appending a period followed by the service type label pair derived as in the previous paragraph.  For example, rt=&#8221;oic.d.light&#8221; might be mapped into &#8220;light._sub._oic._udp&#8221;.</p>
+<p id="rfc.section.4.2.p.5">The resulting string is used to form labels for DNS-SD records which are stored directly in the DNS.</p>
+<h1 id="rfc.section.4.3">
+<a href="#rfc.section.4.3">4.3.</a> <a href="#txt-record-keyvalue-strings" id="txt-record-keyvalue-strings">TXT Record key=value strings</a>
+</h1>
+<p id="rfc.section.4.3.p.1">A number of <a href="#RFC6763" class="xref">[RFC6763]</a> key/value pairs are derived from link-format information, to be exported in the DNS-SD as key=value strings in a TXT record (See Section 6.3 of <a href="#RFC6763" class="xref">[RFC6763]</a>).</p>
+<p id="rfc.section.4.3.p.2">The resource &lt;URI&gt; is exported as key/value pair &#8220;path=&lt;URI&gt;&#8221;.</p>
+<p id="rfc.section.4.3.p.3">The Interface Description &#8220;if&#8221; attribute is exported as key/value pair &#8220;if=&lt;Interface Description&gt;&#8221;.</p>
+<p id="rfc.section.4.3.p.4">The DNS TXT record can be further populated by importing any other resource description attributes as they share the same key=value format specified in Section 6 of <a href="#RFC6763" class="xref">[RFC6763]</a>.</p>
+<h1 id="rfc.section.4.4">
+<a href="#rfc.section.4.4">4.4.</a> <a href="#exporting-resource-links-into-dns-sd" id="exporting-resource-links-into-dns-sd">Exporting resource links into DNS-SD</a>
+</h1>
+<p id="rfc.section.4.4.p.1">Assuming the ability to query a Resource Directory or multicast a GET (?exp) over the local link, CoAP resource discovery may be used to populate the DNS-SD database in an automated fashion.  CoAP resource descriptions (links) can be exported to DNS-SD for exposure to service discovery by using the Resource Instance attribute as the basis for a unique Service Name, composed with the Resource Type as the &lt;ServiceType&gt;, and registered in the correct &lt;Domain&gt;.  The agent responsible for exporting records to the DNS zone file SHOULD be authenticated to the DNS server.  The following example, using the example lookup location /rd-lookup, shows an agent discovering a resource to be exported:</p>
 <pre>
-   Req: GET /rd-lookup/gp?exp
+  Req: GET /rd-lookup/res?exp
 
-   Res: 2.05 Content
-   &lt;coap://[FF05::1]/&gt;;exp;gp="grp_R2-4-015;ins="grp1234";
-ep="lm_R2-4-015_wndw";
-ep="lm_R2-4-015_door
-
+  Res: 2.05 Content
+  &lt;coap://[FDFD::1234]:5683/light/1&gt;;
+    exp;rt="oic.d.light";ins="Spot";
+              d="office";ep="node1"
 </pre>
-<p id="rfc.section.4.1.p.2">The group with FQDN grp_R2-4-015.bc.example.com can be entered into the DNS by the agent. The accompanying instance name is grp1234. The &lt;ServiceType&gt; is chosen to be _group._udp. The agent enters the following RRs into the DNS.</p>
-<pre>
-grp_R2-4-015.bc.example.com.        IN AAAA            FF05::1
-_group._udp.bc.example.com          IN PTR
-                            grp1234._group._udp.bc.example.com
-grp1234._group._udp.bc.example.com  IN SRV  0 0 5683
-                             grp_R2-4-015_door.bc.example.com.
-grp1234._group._udp.bc.example.com  IN TXT
-                                     txtver=1;path=/light/grp1
-</pre>
-<p id="rfc.section.4.1.p.3">From then on, applications unaware of the existence of the RD can use DNS to access the lighting group.</p>
+<p id="rfc.section.4.4.p.2">The agent subsequently registers the following DNS-SD RRs, assuming a zone name &#8220;example.com&#8221; prefixed with &#8220;office&#8221;:</p>
+<p id="rfc.section.4.4.p.3">_oic._udp.office.example.com       IN PTR Spot._oic._udp.office.example.com light._sub._oic._udp.example.com   IN PTR Spot._oic._udp.office.example.com Spot._oic._udp.office.example.com IN TXT txtver=1;path=/light/1 Spot._oic._udp.office.example.com IN SRV  0 0 5683 node1.office.example.com.  node1.office.example.com.          IN AAAA        FDFD::1234</p>
+<p id="rfc.section.4.4.p.4">In the above figure the Service Name is chosen as Spot._oic._udp.office.example.com without the light._sub service prefix.  An alternative Service Name would be: Spot.light._sub._oic._udp.office.example.com.</p>
 <h1 id="rfc.section.5">
 <a href="#rfc.section.5">5.</a> <a href="#iana-considerations" id="iana-considerations">IANA considerations</a>
 </h1>
-<p id="rfc.section.5.p.1">TBD</p>
+<h1 id="rfc.section.5.1">
+<a href="#rfc.section.5.1">5.1.</a> <a href="#mapping-resource-type-into-servicetype" id="mapping-resource-type-into-servicetype">Mapping Resource Type into ServiceType</a>
+</h1>
+<p id="rfc.section.5.1.p.1">TBD</p>
 <h1 id="rfc.section.6">
 <a href="#rfc.section.6">6.</a> <a href="#security-considerations" id="security-considerations">Security considerations</a>
 </h1>
@@ -577,9 +583,44 @@ grp1234._group._udp.bc.example.com  IN TXT
 <a href="#rfc.references.1">7.1.</a> Normative References</h1>
 <table><tbody>
 <tr>
+<td class="reference"><b id="RFC1034">[RFC1034]</b></td>
+<td class="top">
+<a>Mockapetris, P.</a>, "<a href="https://tools.ietf.org/html/rfc1034">Domain names - concepts and facilities</a>", STD 13, RFC 1034, DOI 10.17487/RFC1034, November 1987.</td>
+</tr>
+<tr>
+<td class="reference"><b id="RFC1035">[RFC1035]</b></td>
+<td class="top">
+<a>Mockapetris, P.</a>, "<a href="https://tools.ietf.org/html/rfc1035">Domain names - implementation and specification</a>", STD 13, RFC 1035, DOI 10.17487/RFC1035, November 1987.</td>
+</tr>
+<tr>
+<td class="reference"><b id="RFC1123">[RFC1123]</b></td>
+<td class="top">
+<a>Braden, R.</a>, "<a href="https://tools.ietf.org/html/rfc1123">Requirements for Internet Hosts - Application and Support</a>", STD 3, RFC 1123, DOI 10.17487/RFC1123, October 1989.</td>
+</tr>
+<tr>
+<td class="reference"><b id="RFC2045">[RFC2045]</b></td>
+<td class="top">
+<a>Freed, N.</a> and <a>N. Borenstein</a>, "<a href="https://tools.ietf.org/html/rfc2045">Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies</a>", RFC 2045, DOI 10.17487/RFC2045, November 1996.</td>
+</tr>
+<tr>
 <td class="reference"><b id="RFC2119">[RFC2119]</b></td>
 <td class="top">
 <a>Bradner, S.</a>, "<a href="https://tools.ietf.org/html/rfc2119">Key words for use in RFCs to Indicate Requirement Levels</a>", BCP 14, RFC 2119, DOI 10.17487/RFC2119, March 1997.</td>
+</tr>
+<tr>
+<td class="reference"><b id="RFC3629">[RFC3629]</b></td>
+<td class="top">
+<a>Yergeau, F.</a>, "<a href="https://tools.ietf.org/html/rfc3629">UTF-8, a transformation format of ISO 10646</a>", STD 63, RFC 3629, DOI 10.17487/RFC3629, November 2003.</td>
+</tr>
+<tr>
+<td class="reference"><b id="RFC3986">[RFC3986]</b></td>
+<td class="top">
+<a>Berners-Lee, T.</a>, <a>Fielding, R.</a> and <a>L. Masinter</a>, "<a href="https://tools.ietf.org/html/rfc3986">Uniform Resource Identifier (URI): Generic Syntax</a>", STD 66, RFC 3986, DOI 10.17487/RFC3986, January 2005.</td>
+</tr>
+<tr>
+<td class="reference"><b id="RFC5198">[RFC5198]</b></td>
+<td class="top">
+<a>Klensin, J.</a> and <a>M. Padlipsky</a>, "<a href="https://tools.ietf.org/html/rfc5198">Unicode Format for Network Interchange</a>", RFC 5198, DOI 10.17487/RFC5198, March 2008.</td>
 </tr>
 <tr>
 <td class="reference"><b id="RFC6335">[RFC6335]</b></td>
@@ -602,6 +643,11 @@ grp1234._group._udp.bc.example.com  IN TXT
 <a>Cheshire, S.</a> and <a>M. Krochmal</a>, "<a href="https://tools.ietf.org/html/rfc6763">DNS-Based Service Discovery</a>", RFC 6763, DOI 10.17487/RFC6763, February 2013.</td>
 </tr>
 <tr>
+<td class="reference"><b id="RFC7252">[RFC7252]</b></td>
+<td class="top">
+<a>Shelby, Z.</a>, <a>Hartke, K.</a> and <a>C. Bormann</a>, "<a href="https://tools.ietf.org/html/rfc7252">The Constrained Application Protocol (CoAP)</a>", RFC 7252, DOI 10.17487/RFC7252, June 2014.</td>
+</tr>
+<tr>
 <td class="reference"><b id="RFC8288">[RFC8288]</b></td>
 <td class="top">
 <a>Nottingham, M.</a>, "<a href="https://tools.ietf.org/html/rfc8288">Web Linking</a>", RFC 8288, DOI 10.17487/RFC8288, October 2017.</td>
@@ -618,46 +664,34 @@ grp1234._group._udp.bc.example.com  IN TXT
 <tr>
 <td class="reference"><b id="I-D.ietf-core-resource-directory">[I-D.ietf-core-resource-directory]</b></td>
 <td class="top">
-<a>Shelby, Z.</a>, <a>Koster, M.</a>, <a>Bormann, C.</a>, <a>Stok, P.</a> and <a>C. Amsuess</a>, "<a href="https://tools.ietf.org/html/draft-ietf-core-resource-directory-13">CoRE Resource Directory</a>", Internet-Draft draft-ietf-core-resource-directory-13, March 2018.</td>
+<a>Shelby, Z.</a>, <a>Koster, M.</a>, <a>Bormann, C.</a>, <a>Stok, P.</a> and <a>C. Amsuess</a>, "<a href="https://tools.ietf.org/html/draft-ietf-core-resource-directory-17">CoRE Resource Directory</a>", Internet-Draft draft-ietf-core-resource-directory-17, October 2018.</td>
 </tr>
 <tr>
-<td class="reference"><b id="RFC1034">[RFC1034]</b></td>
+<td class="reference"><b id="I-D.sctl-service-registration">[I-D.sctl-service-registration]</b></td>
 <td class="top">
-<a>Mockapetris, P.</a>, "<a href="https://tools.ietf.org/html/rfc1034">Domain names - concepts and facilities</a>", STD 13, RFC 1034, DOI 10.17487/RFC1034, November 1987.</td>
+<a>Cheshire, S.</a> and <a>T. Lemon</a>, "<a href="https://tools.ietf.org/html/draft-sctl-service-registration-02">Service Registration Protocol for DNS-Based Service Discovery</a>", Internet-Draft draft-sctl-service-registration-02, July 2018.</td>
 </tr>
 <tr>
-<td class="reference"><b id="RFC1035">[RFC1035]</b></td>
+<td class="reference"><b id="OCF">[OCF]</b></td>
 <td class="top">
-<a>Mockapetris, P.</a>, "<a href="https://tools.ietf.org/html/rfc1035">Domain names - implementation and specification</a>", STD 13, RFC 1035, DOI 10.17487/RFC1035, November 1987.</td>
+<a>Foundation, O.</a>, "<a href="https://openconnectivity.org/developer/specifications">OCF Specification 2.0</a>", 2018.</td>
 </tr>
 <tr>
-<td class="reference"><b id="RFC1123">[RFC1123]</b></td>
+<td class="reference"><b id="rt">[rt]</b></td>
 <td class="top">
-<a>Braden, R.</a>, "<a href="https://tools.ietf.org/html/rfc1123">Requirements for Internet Hosts - Application and Support</a>", STD 3, RFC 1123, DOI 10.17487/RFC1123, October 1989.</td>
+<a>IANA, .</a>, "<a href="https://www.iana.org/assignments/core-parameters/core-parameters.xhtml#rt-link-target-att-value">Resource Type (rt=) Link Target Attribute Values</a>", 2012.</td>
 </tr>
 <tr>
-<td class="reference"><b id="RFC2045">[RFC2045]</b></td>
+<td class="reference"><b id="st">[st]</b></td>
 <td class="top">
-<a>Freed, N.</a> and <a>N. Borenstein</a>, "<a href="https://tools.ietf.org/html/rfc2045">Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies</a>", RFC 2045, DOI 10.17487/RFC2045, November 1996.</td>
-</tr>
-<tr>
-<td class="reference"><b id="RFC3629">[RFC3629]</b></td>
-<td class="top">
-<a>Yergeau, F.</a>, "<a href="https://tools.ietf.org/html/rfc3629">UTF-8, a transformation format of ISO 10646</a>", STD 63, RFC 3629, DOI 10.17487/RFC3629, November 2003.</td>
-</tr>
-<tr>
-<td class="reference"><b id="RFC5198">[RFC5198]</b></td>
-<td class="top">
-<a>Klensin, J.</a> and <a>M. Padlipsky</a>, "<a href="https://tools.ietf.org/html/rfc5198">Unicode Format for Network Interchange</a>", RFC 5198, DOI 10.17487/RFC5198, March 2008.</td>
-</tr>
-<tr>
-<td class="reference"><b id="RFC7252">[RFC7252]</b></td>
-<td class="top">
-<a>Shelby, Z.</a>, <a>Hartke, K.</a> and <a>C. Bormann</a>, "<a href="https://tools.ietf.org/html/rfc7252">The Constrained Application Protocol (CoAP)</a>", RFC 7252, DOI 10.17487/RFC7252, June 2014.</td>
+<a>IANA, .</a>, "<a href="https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xml">Service Name and Transport Protocol Port Number Registry</a>", 2018.</td>
 </tr>
 </tbody></table>
-<h1 id="rfc.acknowledgements"><a href="#rfc.acknowledgements">Acknowledgements</a></h1>
+<h1 id="rfc.appendix.A">
+<a href="#rfc.appendix.A">Appendix A.</a> <a href="#acknowledgments" id="acknowledgments">Acknowledgments</a>
+</h1>
 <p id="rfc.section.A.p.1">This document was split out from <a href="#I-D.ietf-core-resource-directory" class="xref">[I-D.ietf-core-resource-directory]</a>.  Zach Shelby was a co-author of the original version of this draft.</p>
+<p id="rfc.section.A.p.2">We like to thank Stuart Cheshire and David Thaler for their clarifying suggestions.</p>
 <h1 id="rfc.authors"><a href="#rfc.authors">Authors' Addresses</a></h1>
 <div class="avoidbreak">
   <address class="vcard">
@@ -667,15 +701,16 @@ grp1234._group._udp.bc.example.com  IN TXT
 		<span class="family-name">Lynn</span>
 	  </span>
 	</span>
-	<span class="org vcardline">Consultant</span>
+	<span class="org vcardline">Oracle + Dyn</span>
 	<span class="adr">
-	  
+	  <span class="vcardline">150 Dow Street, Tower Two</span>
+
 	  <span class="vcardline">
-		<span class="locality"></span> 
-		<span class="region"></span>
-		<span class="code"></span>
+		<span class="locality">Manchester</span>,  
+		<span class="region">NH</span> 
+		<span class="code">03101</span>
 	  </span>
-	  <span class="country-name vcardline"></span>
+	  <span class="country-name vcardline">USA</span>
 	</span>
 	<span class="vcardline">Phone: +1 978-460-4253</span>
 
@@ -721,7 +756,7 @@ grp1234._group._udp.bc.example.com  IN TXT
 
 	  <span class="vcardline">
 		<span class="locality">Mountain View</span>,  
-		<span class="region"></span>
+		<span class="region">CA</span> 
 		<span class="code">94043</span>
 	  </span>
 	  <span class="country-name vcardline">USA</span>
